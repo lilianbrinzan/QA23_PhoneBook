@@ -1,5 +1,6 @@
-package com.phonbook.tests;
+package com.phonebook.tests;
 
+import com.phonebook.model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -8,30 +9,30 @@ public class LoginTests extends TestBase{
 
     @BeforeMethod
     public void ensurePrecondition(){
-        if (!app.isLoginLinkPresent()){
-            app.clickOnSignOutButton();
+        if (!app.getHeader().isLoginLinkPresent()){
+            app.getHeader().clickOnSignOutButton();
         }
         // click Login link
-        app.clickOnLoginLink();
+        app.getHeader().clickOnLoginLink();
     }
-    @Test
+    @Test(priority = 1)
     public void loginPositiveTest() {
         // enter email field
-        app.fillLoginRegistrationForm(new User()
+        app.getUser().fillLoginRegistrationForm(new User()
                 .setEmail("brn@gmail.com")
                 .setPassword("Kan123$-_$"));
         // click on Login button
-        app.clickOnLoginButton();
+        app.getUser().clickOnLoginButton();
         // assert user logged in(check Sign Out button displayed)
-        Assert.assertTrue(app.isSignOutButtonPresent());
+        Assert.assertTrue(app.getHeader().isSignOutButtonPresent());
     }
-    @Test
+    @Test(priority = 2)
     public void loginNegativeWithoutPasswordTest() {
         // enter email field
-        app.fillLoginRegistrationForm(new User().setEmail("brn@gmail.com"));
+        app.getUser().fillLoginRegistrationForm(new User().setEmail("brn@gmail.com"));
         // click on Login button
-        app.clickOnLoginButton();
-        Assert.assertTrue(app.isAlertPresent());
+        app.getUser().clickOnLoginButton();
+        Assert.assertTrue(app.getUser().isAlertPresent());
     }
 
 }

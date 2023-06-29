@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.CreateContactTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-29T14:32:29" hostname="DESKTOP-OS617JJ" time="2.751">
+  <properties/>
+  <testcase name="addContactPositiveTest" classname="com.phonebook.tests.CreateContactTests" time="2.751"/>
+  <system-out><![CDATA[16:32:18.828 [Test worker] INFO  com.phonebook.tests.TestBase -- Start test addContactPositiveTest with data: []
+16:32:32.711 [Test worker] INFO  com.phonebook.tests.TestBase -- PASSED: addContactPositiveTest
+16:32:32.712 [Test worker] INFO  com.phonebook.tests.TestBase -- Stop test
+16:32:32.712 [Test worker] INFO  com.phonebook.tests.TestBase -- ==================================================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

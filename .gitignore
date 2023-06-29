@@ -1,6 +1,12 @@
 .gradle
-**/build/
-!src/**/build/
+/build/classes/
+/build/generated/
+/build/reports/
+/build/resources/
+/build/tmp/
+
+
+/gradle/wrapper/
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -21,6 +27,10 @@ gradle-app.setting
 .classpath
 
 .idea
-settings.gradle
+out/
 gradlew
+gradlew/
 *.bat
+settings.gradle
+*.log
+*.png

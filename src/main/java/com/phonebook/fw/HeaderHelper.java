@@ -1,8 +1,13 @@
-package com.phonbook.tests;
+package com.phonebook.fw;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
-public class HederHelper extends BaseHelper{
+public class HeaderHelper extends BaseHelper {
+    public HeaderHelper(WebDriver driver) {
+        super(driver);
+    }
+
     public void clickOnLoginLink() {
         click(By.xpath("//a[.='LOGIN']"));
     }
